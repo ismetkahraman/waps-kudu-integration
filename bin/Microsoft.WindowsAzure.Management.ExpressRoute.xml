@@ -1,0 +1,2807 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WindowsAzure.Management.ExpressRoute</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient">
+            <summary>
+            The Express Route API provides programmatic access to the functionality
+            needed by the customer to set up Dedicated Circuits and Dedicated
+            Circuit Links. The Express Route Customer API is a REST API. All API
+            operations are performed over SSL and mutually authenticated using
+            X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient">
+            <summary>
+            The Express Route API provides programmatic access to the functionality
+            needed by the customer to set up Dedicated Circuits and Dedicated
+            Circuit Links. The Express Route Customer API is a REST API. All API
+            operations are performed over SSL and mutually authenticated using
+            X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Express Route operation status gets information on the
+            status of Express Route operations in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operationId'>
+            The id  of the operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all golden gate requests.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient.Credentials">
+            <summary>
+            The customer subscription ID forms part of the URI for every call
+            that you make to the Express Route Gateway Manager.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.#ctor">
+            <summary>
+            Initializes a new instance of the ExpressRouteManagementClient
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials,System.Uri)">
+            <summary>
+            Initializes a new instance of the ExpressRouteManagementClient
+            class.
+            </summary>
+            <param name='credentials'>
+            The customer subscription ID forms part of the URI for every call
+            that you make to the Express Route Gateway Manager.
+            </param>
+            <param name='baseUri'>
+            The URI used as the base for all golden gate requests.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials)">
+            <summary>
+            Initializes a new instance of the ExpressRouteManagementClient
+            class.
+            </summary>
+            <param name='credentials'>
+            The customer subscription ID forms part of the URI for every call
+            that you make to the Express Route Gateway Manager.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Express Route operation status gets information on the
+            status of Express Route operations in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operationId'>
+            The id  of the operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.ParseBgpPeeringAccessType(System.String)">
+            <summary>
+            Parse enum values for type BgpPeeringAccessType.
+            </summary>
+            <param name='value'>
+            The value to parse.
+            </param>
+            <returns>
+            The enum value.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.BgpPeeringAccessTypeToString(Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            Convert an enum of type BgpPeeringAccessType to a string.
+            </summary>
+            <param name='value'>
+            The value to convert to a string.
+            </param>
+            <returns>
+            The enum value as a string.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.ParseUpdateCrossConnectionOperation(System.String)">
+            <summary>
+            Parse enum values for type UpdateCrossConnectionOperation.
+            </summary>
+            <param name='value'>
+            The value to parse.
+            </param>
+            <returns>
+            The enum value.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.UpdateCrossConnectionOperationToString(Microsoft.WindowsAzure.Management.ExpressRoute.Models.UpdateCrossConnectionOperation)">
+            <summary>
+            Convert an enum of type UpdateCrossConnectionOperation to a string.
+            </summary>
+            <param name='value'>
+            The value to convert to a string.
+            </param>
+            <returns>
+            The enum value as a string.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all golden gate requests.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.Credentials">
+            <summary>
+            The customer subscription ID forms part of the URI for every call
+            that you make to the Express Route Gateway Manager.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.BeginNewAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.BeginRemoveAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Bgp Peering Route operation deletes an existing bgp
+            peering.
+            </summary>
+            <param name='serviceKey'>
+            Service Key representing the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.BeginUpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.GetAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Get Bgp Peering operation retrieves the bgp peering for the
+            dedicated circuit with the specified service key.
+            </summary>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.NewAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Bgp Peering operation creates a new bgp peering associated
+            with the dedicated circuit specified by the service key provided.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.RemoveAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Bgp Peering operation deletes an existing bgp peering.
+            </summary>
+            <param name='serviceKey'>
+            Service key associated with the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering or
+            creates a new one if one doesn't exist.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.#ctor(Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient)">
+            <summary>
+            Initializes a new instance of the BgpPeeringOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.BeginNewAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.BeginRemoveAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Bgp Peering Route operation deletes an existing bgp
+            peering.
+            </summary>
+            <param name='serviceKey'>
+            Service Key representing the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.BeginUpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.GetAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Get Bgp Peering operation retrieves the bgp peering for the
+            dedicated circuit with the specified service key.
+            </summary>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.NewAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Bgp Peering operation creates a new bgp peering associated
+            with the dedicated circuit specified by the service key provided.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.RemoveAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Bgp Peering operation deletes an existing bgp peering.
+            </summary>
+            <param name='serviceKey'>
+            Service key associated with the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering or
+            creates a new one if one doesn't exist.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginNew(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginRemove(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Remove Bgp Peering Route operation deletes an existing bgp
+            peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key representing the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginRemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Remove Bgp Peering Route operation deletes an existing bgp
+            peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key representing the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginUpdate(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.BeginUpdateAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.Get(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Get Bgp Peering operation retrieves the bgp peering for the
+            dedicated circuit with the specified service key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Get Bgp Peering operation retrieves the bgp peering for the
+            dedicated circuit with the specified service key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.New(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters)">
+            <summary>
+            The New Bgp Peering operation creates a new bgp peering associated
+            with the dedicated circuit specified by the service key provided.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters)">
+            <summary>
+            The New Bgp Peering operation creates a new bgp peering associated
+            with the dedicated circuit specified by the service key provided.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.Remove(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Remove Bgp Peering operation deletes an existing bgp peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key associated with the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.RemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType)">
+            <summary>
+            The Remove Bgp Peering operation deletes an existing bgp peering.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key associated with the bgp peering to be deleted.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.Update(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering or
+            creates a new one if one doesn't exist.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.BgpPeeringOperationsExtensions.UpdateAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType,Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters)">
+            <summary>
+            The Update Bgp Peering operation updates an existing bgp peering or
+            creates a new one if one doesn't exist.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IBgpPeeringOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='accessType'>
+            Whether the peering is private or public.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Bgp Peering Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.BeginNewAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for as dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.BeginUpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update CrossConnection operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Cross Connection operation retrieves the Cross Connection
+            information for the Dedicated Circuit with the specified service
+            key.
+            </summary>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Cross Connection operation retrieves a list of cross
+            connections owned by the provider.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Cross Connection operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.NewAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for the given azure circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.#ctor(Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient)">
+            <summary>
+            Initializes a new instance of the CrossConnectionOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.BeginNewAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for as dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.BeginUpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update CrossConnection operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Cross Connection operation retrieves the Cross Connection
+            information for the Dedicated Circuit with the specified service
+            key.
+            </summary>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Cross Connection operation retrieves a list of cross
+            connections owned by the provider.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Cross Connection operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.NewAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for the given azure circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.BeginNew(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for as dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for as dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.BeginUpdate(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update CrossConnection operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.BeginUpdateAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update CrossConnection operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.Get(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The Get Cross Connection operation retrieves the Cross Connection
+            information for the Dedicated Circuit with the specified service
+            key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The Get Cross Connection operation retrieves the Cross Connection
+            information for the Dedicated Circuit with the specified service
+            key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The servicee key representing the dedicated circuit.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.List(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations)">
+            <summary>
+            The List Cross Connection operation retrieves a list of cross
+            connections owned by the provider.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <returns>
+            The List Cross Connection operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations)">
+            <summary>
+            The List Cross Connection operation retrieves a list of cross
+            connections owned by the provider.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <returns>
+            The List Cross Connection operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.New(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for the given azure circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String)">
+            <summary>
+            The New Cross Connection operation provisions a cross connection
+            for the given azure circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key of the dedicated circuit.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.Update(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.CrossConnectionOperationsExtensions.UpdateAsync(Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations,System.String,Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters)">
+            <summary>
+            The Update Cross Connection operation updates an existing cross
+            connection.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ICrossConnectionOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the relationship between Azure and the
+            customer.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Bgp Peering operation.
+            </param>
+            <returns>
+            The Get Cross Connection Operation Response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.BeginNewAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.BeginRemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Dedicated Circuit Link operation retrieves the specified
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.ListAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit Links operation retrieves a list of
+            Vnets that are linked to the circuit with the specified service
+            key.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.NewAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.RemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.#ctor(Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient)">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitLinkOperations
+            class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.BeginNewAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.BeginRemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Dedicated Circuit Link operation retrieves the specified
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.ListAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit Links operation retrieves a list of
+            Vnets that are linked to the circuit with the specified service
+            key.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.NewAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.RemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.BeginNew(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.BeginRemove(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.BeginRemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.Get(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Get Dedicated Circuit Link operation retrieves the specified
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Get Dedicated Circuit Link operation retrieves the specified
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.List(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String)">
+            <summary>
+            The List Dedicated Circuit Links operation retrieves a list of
+            Vnets that are linked to the circuit with the specified service
+            key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String)">
+            <summary>
+            The List Dedicated Circuit Links operation retrieves a list of
+            Vnets that are linked to the circuit with the specified service
+            key.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.New(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The New Dedicated Circuit Link operation creates a new dedicated
+            circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <returns>
+            The Get Dedicated Circuit Link operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.Remove(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitLinkOperationsExtensions.RemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations,System.String,System.String)">
+            <summary>
+            The Remove Dedicated Circuit Link operation deletes an existing
+            dedicated circuit link.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitLinkOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the New Dedicated Circuit operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.BeginRemoveAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit to be deleted.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Dedicated Circuit operation retrieves the specified
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit operation retrieves a list of dedicated
+            circuits owned by the customer.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.RemoveAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit to be deleted.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.#ctor(Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient)">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the New Dedicated Circuit operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.BeginRemoveAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit to be deleted.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Dedicated Circuit operation retrieves the specified
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit operation retrieves a list of dedicated
+            circuits owned by the customer.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters,System.Threading.CancellationToken)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.RemoveAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit to be deleted.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.BeginNew(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Dedicated Circuit operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.BeginNewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the New Dedicated Circuit operation.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.BeginRemove(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit to be deleted.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.BeginRemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            Service key representing the dedicated circuit to be deleted.
+            </param>
+            <returns>
+            A standard express route gateway response including an HTTP status
+            code and request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.Get(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Get Dedicated Circuit operation retrieves the specified
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Get Dedicated Circuit operation retrieves the specified
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            The service key representing the circuit.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.List(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations)">
+            <summary>
+            The List Dedicated Circuit operation retrieves a list of dedicated
+            circuits owned by the customer.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations)">
+            <summary>
+            The List Dedicated Circuit operation retrieves a list of dedicated
+            circuits owned by the customer.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.New(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.NewAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters)">
+            <summary>
+            The New Dedicated Circuit operation creates a new dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The Get Dedicated Circuit operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.Remove(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit to be deleted.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitOperationsExtensions.RemoveAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations,System.String)">
+            <summary>
+            The Remove Dedicated Circuit operation deletes an existing
+            dedicated circuit.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitOperations.
+            </param>
+            <param name='serviceKey'>
+            Service Key associated with the dedicated circuit to be deleted.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitServiceProviderOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit Service Providers operation retrieves a
+            list of available dedicated circuit service providers.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit Service Provider operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitServiceProviderOperations.#ctor(Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient)">
+            <summary>
+            Initializes a new instance of the
+            DedicatedCircuitServiceProviderOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitServiceProviderOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Dedicated Circuit Service Providers operation retrieves a
+            list of available dedicated circuit service providers.
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Dedicated Circuit Service Provider operation response.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitServiceProviderOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitServiceProviderOperationsExtensions.List(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitServiceProviderOperations)">
+            <summary>
+            The List Dedicated Circuit Service Providers operation retrieves a
+            list of available dedicated circuit service providers.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitServiceProviderOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit Service Provider operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.DedicatedCircuitServiceProviderOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitServiceProviderOperations)">
+            <summary>
+            The List Dedicated Circuit Service Providers operation retrieves a
+            list of available dedicated circuit service providers.
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IDedicatedCircuitServiceProviderOperations.
+            </param>
+            <returns>
+            The List Dedicated Circuit Service Provider operation response.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClientExtensions">
+            <summary>
+            The Express Route API provides programmatic access to the functionality
+            needed by the customer to set up Dedicated Circuits and Dedicated
+            Circuit Links. The Express Route Customer API is a REST API. All API
+            operations are performed over SSL and mutually authenticated using
+            X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClientExtensions.GetOperationStatus(Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient,System.String)">
+            <summary>
+            The Get Express Route operation status gets information on the
+            status of Express Route operations in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient.
+            </param>
+            <param name='operationId'>
+            The id  of the operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.ExpressRouteManagementClientExtensions.GetOperationStatusAsync(Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient,System.String)">
+            <summary>
+            The Get Express Route operation status gets information on the
+            status of Express Route operations in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.ExpressRoute.IExpressRouteManagementClient.
+            </param>
+            <param name='operationId'>
+            The id  of the operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering">
+            <summary>
+            Describes a Bgp Peering.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.#ctor">
+            <summary>
+            Initializes a new instance of the AzureBgpPeering class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.AzureAsn">
+            <summary>
+            Specifies the numeric identifier of the public autonomous system
+            (AS) in which the device of Windows Azure is configured.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.PeerAsn">
+            <summary>
+            Specifies the numeric identifier of the public autonomous system
+            (AS) in which the device of the service provider is configured.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.PrimaryAzurePort">
+            <summary>
+            Specifies the name of the primary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.PrimaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the primary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.SecondaryAzurePort">
+            <summary>
+            Specifies the name of the secondary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.SecondaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the secondary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.State">
+            <summary>
+            The current state of the BGP session. Possible values are Disabled,
+            Enabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureBgpPeering.VlanId">
+            <summary>
+            Specifies the identifier that is used to identify the customer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit">
+            <summary>
+            Describes a Dedicated Circuit.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.#ctor">
+            <summary>
+            Initializes a new instance of the AzureDedicatedCircuit class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.Bandwidth">
+            <summary>
+            Specifies the bandwidth that is assigned to the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.CircuitName">
+            <summary>
+            Specifies the name of the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.Location">
+            <summary>
+            Specifies the peering location of the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.ServiceKey">
+            <summary>
+            A value that uniquely identifies the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.ServiceProviderName">
+            <summary>
+            Specifies the name of the dedicated circuit service provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.ServiceProviderProvisioningState">
+            <summary>
+            Specifies the provisioning state of the circuit. Values are
+            NotProvisioned, Provisioning, Provisioned, or DeProvisioning.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuit.Status">
+            <summary>
+            The current status of the circuit. Values are Disabled, Disabliing,
+            Enabled, Enabling.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitLink">
+            <summary>
+            Describes a Dedicated Circuit Link.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitLink.#ctor">
+            <summary>
+            Initializes a new instance of the AzureDedicatedCircuitLink class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitLink.State">
+            <summary>
+            State of the dedicated circuit link. Values can be NotProvisioned,
+            Provisioning, Provisioned, Deprovisioning, or ProvisioningError.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitLink.VnetName">
+            <summary>
+            The name of the Vnet that is linked.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider">
+            <summary>
+            Describes a Dedicated Circuit Service Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider.#ctor">
+            <summary>
+            Initializes a new instance of the
+            AzureDedicatedCircuitServiceProvider class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider.DedicatedCircuitBandwidths">
+            <summary>
+            Bandwidths available to create dedicated circuits.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider.DedicatedCircuitLocations">
+            <summary>
+            Locations available for peering with Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider.Name">
+            <summary>
+            Name of the dedicated circuit service provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.AzureDedicatedCircuitServiceProvider.Type">
+            <summary>
+            Type of the dedicated circuit service provider. Can be IXP or Telco.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType">
+            <summary>
+            The access type of the bgp peering.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType.Private">
+            <summary>
+            The bgp peering is private.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringAccessType.Public">
+            <summary>
+            The bgp peering is public.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringGetResponse">
+            <summary>
+            The Get Bgp Peering Operation Response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the BgpPeeringGetResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringGetResponse.BgpPeering">
+            <summary>
+            Details for the requested Bgp Peering.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters">
+            <summary>
+            The New Bgp Peering parameters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.#ctor">
+            <summary>
+            Initializes a new instance of the BgpPeeringNewParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.PeerAsn">
+            <summary>
+            Specifies the numeric identifier of the public autonomous system
+            (AS) in which the device of the service provider is configured.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.PrimaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the primary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.SecondaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the secondary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.SharedKey">
+            <summary>
+            Optional. Specifies the shared MD5 key that is to be used for
+            authorization.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringNewParameters.VlanId">
+            <summary>
+            Specifies the identifier that is used to identify the customer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BGPPeeringState">
+            <summary>
+            The state of the BGP Peering.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters">
+            <summary>
+            Update Bgp Peering Operation Parameters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the BgpPeeringUpdateParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.PeerAsn">
+            <summary>
+            Specifies the numeric identifier of the public autonomous system
+            (AS) in which the device of the service provider is configured.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.PrimaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the primary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.SecondaryPeerSubnet">
+            <summary>
+            Specifies the subnet addresses of the interface to be used for
+            establishing the BGP session on the secondary port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.SharedKey">
+            <summary>
+            Optional. Specifies the shared MD5 key that is to be used for
+            authorization.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.BgpPeeringUpdateParameters.VlanId">
+            <summary>
+            Specifies the identifier that is used to identify the customer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse">
+            <summary>
+            The Get Cross Connection Operation Response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the CrossConnectionGetResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.Bandwidth">
+            <summary>
+            Specifies the bandwidth that is assigned to the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.PrimaryAzurePort">
+            <summary>
+            Specifies the name of the primary port. Only available when the
+            provisioning state is Provisioning or Provisioned.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.ProvisioningState">
+            <summary>
+            Provisioning state of the cross connection. Can be Provisioned,
+            NotProvisioned, Provisioning or Deprovisioning.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.SecondaryAzurePort">
+            <summary>
+            Specifies the name of the secondary port. Only available when the
+            provisioning state is Provisioning or Provisioned.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.STag">
+            <summary>
+            Specifies the identifier of circuit traffic.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionGetResponse.Status">
+            <summary>
+            The current status of the circuit. Possible values are: Disabled,
+            Disabling, Enabling, Enabled.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse">
+            <summary>
+            The List Cross Connection operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the CrossConnectionListResponse class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of CrossConnections.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of CrossConnections.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.#ctor">
+            <summary>
+            Initializes a new instance of the CrossConnection class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.Bandwidth">
+            <summary>
+            Specifies the bandwidth that is assigned to the circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.PrimaryAzurePort">
+            <summary>
+            Specifies the name of the primary port. Only available when the
+            provisioning state is Provisioning or Provisioned.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.ProvisioningState">
+            <summary>
+            Provisioning state of the cross connection. Can be Provisioned,
+            NotProvisioned, Provisioning or Deprovisioning.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.SecondaryAzurePort">
+            <summary>
+            Specifies the name of the secondary port. Only available when
+            the provisioning state is Provisioning or Provisioned.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.STag">
+            <summary>
+            Specifies the identifier of circuit traffic.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionListResponse.CrossConnection.Status">
+            <summary>
+            The current status of the circuit. Possible values are:
+            Disabled, Disabling, Enabling, Enabled.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters">
+            <summary>
+            Update Cross Connection Operation Parameters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the CrossConnectionUpdateParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters.Operation">
+            <summary>
+            Specifies the notification operation to perform. Possible values
+            are: NotifyCrossConnectionProvisioned,
+            NotifyCrossConnectionNotProvisioned.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.CrossConnectionUpdateParameters.ProvisioningError">
+            <summary>
+            Specifies the error that occurred if provisioning was not
+            successful.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitBandwidth.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitBandwidth class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitBandwidth.Bandwidth">
+            <summary>
+            Bandwidth of the dedicated circuit in Mbps.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitBandwidth.Label">
+            <summary>
+            Label associated with the bandwidth.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitGetResponse">
+            <summary>
+            The Get Dedicated Circuit operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitGetResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitGetResponse.DedicatedCircuit">
+            <summary>
+            Details of the requested dedicated circuit.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkGetResponse">
+            <summary>
+            The Get Dedicated Circuit Link operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitLinkGetResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkGetResponse.DedicatedCircuitLink">
+            <summary>
+            Details of the requested dedicated circuit link.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkListResponse">
+            <summary>
+            The List Dedicated Circuit Link operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitLinkListResponse
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuitLinks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuitLinks.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitLinkState">
+            <summary>
+            The state of the dedicated circuit link.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitListResponse">
+            <summary>
+            The List Dedicated Circuit operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitListResponse
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuits.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuits.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters">
+            <summary>
+            The parameters to the New Dedicated Circuit request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters.#ctor">
+            <summary>
+            Initializes a new instance of the DedicatedCircuitNewParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters.Bandwidth">
+            <summary>
+            Bandwidth requested for the circuit in Mbps.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters.CircuitName">
+            <summary>
+            Name of the dedicated circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters.Location">
+            <summary>
+            Location of the dedicated circuit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitNewParameters.ServiceProviderName">
+            <summary>
+            Service provider chosen to create the dedicated circuit with.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitServiceProviderListResponse">
+            <summary>
+            The List Dedicated Circuit Service Provider operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitServiceProviderListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            DedicatedCircuitServiceProviderListResponse class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitServiceProviderListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuitServiceProviders.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitServiceProviderListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of DedicatedCircuitServiceProviders.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.DedicatedCircuitState">
+            <summary>
+            The state of the dedicated circuit.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationResponse">
+            <summary>
+            A standard express route gateway response including an HTTP status code
+            and request ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ExpressRouteOperationResponse
+            class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatus">
+            <summary>
+            The status of the asynchronous request made to the express route
+            gateway manager.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatus.InProgress">
+            <summary>
+            The asynchronous request is in progress.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatus.Successful">
+            <summary>
+            The asynchronous request succeeded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatus.Failed">
+            <summary>
+            The asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse">
+            <summary>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or has
+            failed. Note that this status is distinct from the HTTP status code
+            returned for the Get Operation Status operation itself.  If the
+            asynchronous operation succeeded, the response body includes the HTTP
+            status code for the successful request.  If the asynchronous operation
+            failed, the response body includes the HTTP status code for the failed
+            request, and also includes error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            ExpressRouteOperationStatusResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.Data">
+            <summary>
+            Data returned for the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.Error">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.HttpStatusCode">
+            <summary>
+            The HTTP status code for the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.Id">
+            <summary>
+            The request ID of the asynchronous request. This value is returned
+            in the x-ms-request-id response header of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.Status">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.ErrorDetails">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.ErrorDetails.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.ErrorDetails.Code">
+            <summary>
+            The management service error code returned if the asynchronous
+            request failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ExpressRouteOperationStatusResponse.ErrorDetails.Message">
+            <summary>
+            The management service error message returned if the
+            asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.ProviderProvisioningState">
+            <summary>
+            The provisioning state of the service provider
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.ExpressRoute.Models.UpdateCrossConnectionOperation">
+            <summary>
+            The update operation that needs to be performed on the cross connection.
+            </summary>
+        </member>
+    </members>
+</doc>
